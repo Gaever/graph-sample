@@ -1,0 +1,19 @@
+{
+  "name": "vityaz-graph",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:graph": "yarn workspace @vityaz-graph/graph start",
+    "dev:model-editor": "yarn workspace @vityaz-graph/model-editor start",
+    "start:graph": "yarn http-server ./packages/graph/build",
+    "start:model-editor": "yarn http-server ./packages/model-editor/build",
+    "build": "lerna run build --stream"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "lerna": "^5.4.3"
+  }
+}
